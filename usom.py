@@ -46,7 +46,11 @@ def download_file(url):
 def main():
     download_file(getir_usom)
     try:
-        shutil.copy(hosts_path, "hosts_backup_" + str(random.randint(1000,9999999))) # Backup file
+        fname = str("hosts_backup_" + str(random.randint(1000,9999999)))
+        print("================================")
+        print("Hosts dosyası yedekleniyor... (" + fname + ")")
+        print("================================")
+        shutil.copy(hosts_path, fname) # Backup file
         os.remove(hosts_path)
         f = open(hosts_path, "a")
         f.write("# Hosts file!")
