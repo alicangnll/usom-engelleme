@@ -54,7 +54,7 @@ def main():
                 hostfile.write(gelendata)
             hostfile.close()
     except(PermissionError):
-        print("Maalesef gerekli yetki yok gibi görünüyor")
+        print("Maalesef gerekli yetki yok gibi görünüyor. \nDosya değiştirilmiş olabilir " + hosts_path + " dosyasını kontrol edin.")
 
 if __name__ == '__main__':
     main()
