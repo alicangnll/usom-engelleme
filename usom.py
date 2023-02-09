@@ -46,13 +46,16 @@ def download_file(url):
 
 def main():
     download_file(getir_usom)
-    shutil.copy(hosts_path, "hosts_backup") # Backup file
-    for i in open("url-list.txt", "r+"):
-        with open(hosts_path, "a") as hostfile:
-            gelendata = yonlendir + " " + i.replace(" ", "")
-            hostfile.write(gelendata)
-        hostfile.truncate()
-        time.sleep(3)
+    try:
+        shutil.copy(hosts_path, "hosts_backup") # Backup file
+        for i in open("url-list.txt", "r+"):
+            with open(hosts_path, "a") as hostfile:
+                gelendata = yonlendir + " " + i.replace(" ", "")
+                hostfile.write(gelendata)
+            hostfile.truncate()
+            time.sleep(3)
+    except(PermissionError):
+        print("Maalesef gerekli yetki yok gibi görünüyor")
 
 if __name__ == '__main__':
     file = os.getcwd()
