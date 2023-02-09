@@ -46,6 +46,10 @@ def download_file(url):
 def main():
     download_file(getir_usom)
     try:
+        os.remove(hosts_path)
+        f = open(hosts_path, "a")
+        f.write("# Hosts file!")
+        f.close()
         shutil.copy(hosts_path, "hosts_backup_" + str(random.randint(1000,9999999))) # Backup file
         for i in open("url-list.txt", "r+"):
             with open(hosts_path, "a") as hostfile:
