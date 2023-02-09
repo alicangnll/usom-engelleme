@@ -1,0 +1,4 @@
+pyfiglet
+pywin32
+shutil
+requests
