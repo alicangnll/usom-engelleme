@@ -58,9 +58,4 @@ def main():
         print("Maalesef gerekli yetki yok gibi görünüyor")
 
 if __name__ == '__main__':
-    file = os.getcwd()
-    # Yönetici olarak başlattıysanız burayı silin.
-    uname = input("Lütfen kullanıcı adınızı giriniz : ")
-    subprocess.call(['runas', '/user:' + uname,'python ' + file + '\\usom_engelleme.py'], shell=True)
-    # Buradan sonrasını silmeyin.
     main()
