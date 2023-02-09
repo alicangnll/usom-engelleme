@@ -52,7 +52,7 @@ def main():
         shutil.copy(hosts_path, fname) # Backup file
         os.remove(hosts_path)
         f = open(hosts_path, "a")
-        f.write("# Hosts file!")
+        f.write("# Hosts file!\n")
         f.close()
         for i in open("url-list.txt", "r+"):
             with open(hosts_path, "a") as hostfile:
