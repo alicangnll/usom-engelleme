@@ -8,5 +8,5 @@ USOM URL Engelleme (Windows/Linux)
 2) Gerekli paketleri yüklemek için
 <pre>pip install -r requirements.txt</pre>
 3) Cmd'yi yönetici olarak çalıştırın (son satırları silmeniz gerekebilir. Dosyayı kontrol edin)
-4) cd "PYTHON_DIZINI" komutuyla Python scriptinin bulunduğu dizine gidin.
-5) python usom.py komutunu çalıştırın.
+4) python usom.py komutunu çalıştırın.
+<pre>python "C:\Users\Kullanici\Desktop\usom.py"</pre>
