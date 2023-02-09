@@ -47,7 +47,6 @@ def main():
     download_file(getir_usom)
     try:
         fname = str("hosts_backup_" + str(random.randint(1000,9999999)))
-        print("================================")
         print("Hosts dosyası yedekleniyor... (" + fname + ")")
         print("================================")
         shutil.copy(hosts_path, fname) # Backup file
@@ -58,6 +57,7 @@ def main():
         for i in open("url-list.txt", "r+"):
             with open(hosts_path, "a") as hostfile:
                 gelendata = yonlendir + " " + i.replace(" ", "")
+                print(i.replace(" ", "") + " engellendi!")
                 hostfile.write(gelendata)
             hostfile.close()
     except(PermissionError):
