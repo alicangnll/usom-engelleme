@@ -1,5 +1,4 @@
-from datetime import time
-import requests, shutil, pyfiglet, sys, os, ctypes, win32com.shell.shell, win32event, win32process, subprocess
+import requests, shutil, pyfiglet, sys, os, ctypes, win32com.shell.shell, win32event, win32process, random
 
 
 if sys.platform.startswith("linux") or sys.platform == "darwin":
@@ -47,7 +46,7 @@ def download_file(url):
 def main():
     download_file(getir_usom)
     try:
-        shutil.copy(hosts_path, "hosts_backup") # Backup file
+        shutil.copy(hosts_path, "hosts_backup_" + print(random.randint(1000,9999999))) # Backup file
         for i in open("url-list.txt", "r+"):
             with open(hosts_path, "a") as hostfile:
                 gelendata = yonlendir + " " + i.replace(" ", "")
