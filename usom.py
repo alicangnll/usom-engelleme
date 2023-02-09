@@ -52,8 +52,7 @@ def main():
             with open(hosts_path, "a") as hostfile:
                 gelendata = yonlendir + " " + i.replace(" ", "")
                 hostfile.write(gelendata)
-            hostfile.truncate()
-            time.sleep(3)
+            hostfile.close()
     except(PermissionError):
         print("Maalesef gerekli yetki yok gibi görünüyor")
 
