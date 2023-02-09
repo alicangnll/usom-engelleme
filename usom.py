@@ -7,7 +7,7 @@ else:
     hosts_path = r"C:\Windows\System32\drivers\etc\hosts"
 getir_usom = "https://www.usom.gov.tr/url-list.txt"
 yonlendir = "127.0.0.1"
-ascii_banner = pyfiglet.figlet_format("USOM URL Filter for Windows")
+ascii_banner = pyfiglet.figlet_format("USOM URL Filter")
 
 print("================================")
 print(ascii_banner)
